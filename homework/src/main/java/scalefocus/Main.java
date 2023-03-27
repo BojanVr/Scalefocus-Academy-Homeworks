@@ -1,5 +1,6 @@
 package scalefocus;
 
+import scalefocus.clients.ClientPresenter;
 import scalefocus.orders.OrderAccessor;
 import scalefocus.orders.OrderPresenter;
 import scalefocus.util.ConsoleRangeReader;
@@ -22,6 +23,7 @@ public class Main {
     private static final String PLACEHOLDER_4 = "Bye";
 
     private static final OrderPresenter orderPresenter = new OrderPresenter();//presenting the order menu
+    private static final ClientPresenter clientPresenter = new ClientPresenter();
 
     private static final int MIN_MENU_VALUE = 1;
     private static final int MAX_MENU_VALUE = 5;
@@ -38,7 +40,7 @@ public class Main {
                     System.out.println(PLACEHOLDER_1);
                     break;
                 case 3:
-                    System.out.println(PLACEHOLDER_2);
+                    clientPresenter.OrderMenu();
                     break;
                 case 4:
                     System.out.println(PLACEHOLDER_3);
